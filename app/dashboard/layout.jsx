@@ -6,7 +6,8 @@ function DashboardLayout({children}) {
 
 <Header/>  
  {/* header is here as we want it throughout the application */}
-    {children}
+ <div className='mx-5 md:mx-20 lg:mx-36'> {children}</div>
+    
     </div>
   )
 }
