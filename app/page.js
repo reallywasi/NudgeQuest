@@ -1,12 +1,10 @@
 import Image from "next/image";
-
+import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
-    <main className=" h-screen">
-      <div className="flex flex-col items-center">
-        <div className="flex items-center">Wasi</div>
-        {/* You can add more content here if needed */}
-      </div>
-    </main>
+   <div>
+<Button className="px-3 ">
+wasi
+</Button>   </div>
   );
 }
