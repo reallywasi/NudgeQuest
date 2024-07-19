@@ -29,7 +29,7 @@ function AddNewInterview() {
   const [jobExperience, setJobExperience] = useState();
   const [loading, setLoading] = useState(false);
   const [jsonResponse, setJsonResponse] = useState([]);
-  // const router=useRouter();
+  const router=useRouter();
   const { user } = useUser(); // to get user detail like who logged in
 
   //______________________________________________________
@@ -73,6 +73,12 @@ function AddNewInterview() {
         })
         .returning({ mockId: MockInterview.mockId });
       console.log("inserted ID:", resp);
+    
+    if(resp)
+    {
+        setOpenDailog(false)
+        router.push('/dashboard/interview/'+resp[0]?.mockId)
+    }
     } else {
       console.log("ERROR");
     }
