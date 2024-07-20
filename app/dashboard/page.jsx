@@ -1,6 +1,7 @@
 import { UserButton } from "@clerk/nextjs";
 import React from "react";
 import AddNewInterview from "./_components/AddNewInterview";
+import InterviewList from "./_components/InterviewList";
 
 function Dashboard() {
   return (
@@ -9,12 +10,9 @@ function Dashboard() {
       <h2 className="text-gray-500">Create and Start your AI based Mock Interview</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 my-5">
       <AddNewInterview/>
-      <AddNewInterview/>
-      <AddNewInterview/>
-      <AddNewInterview/>
-      <AddNewInterview/>
-      <AddNewInterview/>
     </div>
+    <InterviewList/>
+
     </div>
   );
 }
