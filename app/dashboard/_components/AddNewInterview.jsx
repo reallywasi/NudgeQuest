@@ -20,7 +20,7 @@ import { MockInterview } from "@/utils/schema";
 import { v4 as uuidv4 } from "uuid";
 import { useUser } from "@clerk/nextjs";
 import moment from "moment";
-// import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 function AddNewInterview() {
   const [openDailog, setOpenDailog] = useState(false);
