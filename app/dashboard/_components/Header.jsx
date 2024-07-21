@@ -11,9 +11,15 @@ console.log(path)
     })
 
   return (
-    <div className="flex p-4 items-center justify-between bg-secondary shadow-sm">
-      <Image src={"/logo.svg"} width={30} height={30} />
-      <ul className="hidden md:flex gap-6">
+
+
+<div className="flex p-4 items-center justify-between shadow-sm bg-gradient-to-r from-black via-secondary to-secondary">
+  
+
+
+
+<Image src={"/NudgeQues_logo-Photoroom.png"} width={200} height={30} className="shadow-xl" />
+<ul className="hidden md:flex gap-6">
       <li className={`hover:text-primary hover:font-bold transition-all
             cursor-pointer
             ${path=='/dashboard'&&'text-primary font-bold'}
@@ -40,3 +46,7 @@ console.log(path)
 }
 
 export default Header;
+
+
+// <div className="flex p-4 items-center justify-between bg-black shadow-sm text-white">
+// <Image src={'/NudgeQues_logo-Photoroom.png'} width={180} height={30}/>
