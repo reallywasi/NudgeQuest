@@ -300,25 +300,26 @@
 
 // src/app/Home/page.tsx
 import React from 'react';
+import Down from './(home)/down';
+import qa from './(home)/qa';
+import Timeline from './(home)/Timeline';
+import Homeheader from './(home)/Homeheader';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 const Home = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-primary text-white py-4 shadow-md">
-        <div className="container mx-auto flex justify-between items-center px-4">
-          <h1 className="text-3xl font-bold">NudgeQuest</h1>
-          <nav>
-            <a href="/dashboard" className="text-lg font-medium hover:text-secondary mx-4">Sign Up</a>
-            <a href="/dashboard" className="text-lg font-medium hover:text-secondary mx-4">Login</a>
-            <a href="/dashboard" className="text-lg font-medium hover:text-secondary mx-4">Dashboard</a>
-          </nav>
-        </div>
-      </header>
+<Homeheader/>
 
       <main className="container mx-auto px-4 py-16">
         <section className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Welcome to NudgeQuest</h2>
           <p className="text-lg text-gray-600 mb-8">Your ultimate AI-powered mock job interview platform.</p>
-          <a href="/dashboard" className="bg-primary text-white py-2 px-6 rounded-lg font-medium hover:bg-secondary hover:text-black hover:border-blac transition duration-300">Get Started</a>
+          <a href="/dashboard" className="bg-primary text-white py-4 px-14 rounded-lg font-medium hover:bg-secondary hover:text-black hover:border-blac transition duration-300">Get Started</a>
         </section>
 
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -340,34 +341,63 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose NudgeQuest?</h2>
-          <p className="text-lg text-gray-600 mb-8">Our platform is designed to help you ace your job interviews with AI-driven simulations and detailed feedback.</p>
-          <a href="/dashboard" className="bg-primary text-white py-2 px-6 rounded-lg font-medium hover:bg-secondary hover:text-black hover:border-blac transition duration-300">Join Now</a>
-        </section>
+   <section className="text-center mb-16">
+  <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose NudgeQuest?</h2>
+  <p className="text-lg text-gray-600 mb-8">
+    NudgeQuest stands out by offering an advanced, AI-driven interview simulation experience. Our platform delivers personalized interview questions based on your specific job role and tech stack. With real-time voice and webcam analysis, you receive actionable feedback on your responses, helping you improve clarity, coherence, and confidence. Whether you’re preparing for technical or behavioral interviews, NudgeQuest provides tailored support to help you excel in any job interview scenario.
+  </p>
+  <a href="/dashboard" className="bg-primary text-white py-2 px-6 rounded-lg font-medium hover:bg-secondary hover:text-black hover:border-black transition duration-300">
+    Join Now
+  </a>
+</section>
 
-        <section className="bg-gray-50 py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">What Our Users Say</h2>
-            <div className="flex flex-wrap justify-center gap-8">
-              <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
-                <p className="text-gray-600 mb-4">“NudgeQuest has transformed my interview preparation. The AI simulations are incredibly realistic, and the feedback is spot-on.”</p>
-                <h4 className="text-lg font-semibold text-gray-800">Jane Doe</h4>
-                <p className="text-gray-500">Software Engineer</p>
-              </div>
-              <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
-                <p className="text-gray-600 mb-4">“The detailed insights I receive after each mock interview have been invaluable in my job search. Highly recommended!”</p>
-                <h4 className="text-lg font-semibold text-gray-800">John Smith</h4>
-                <p className="text-gray-500">Product Manager</p>
-              </div>
-              <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
-                <p className="text-gray-600 mb-4">“I love the community feature. It's great to connect with other job seekers and share experiences.”</p>
-                <h4 className="text-lg font-semibold text-gray-800">Emily Johnson</h4>
-                <p className="text-gray-500">UX Designer</p>
-              </div>
-            </div>
-          </div>
-        </section>
+<section className="bg-gray-50 py-16">
+<Timeline/>
+
+</section>
+
+
+        {/* Testimony section*/}
+        <section className="bg-gray-100 py-16">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">What Our Users Say</h2>
+    <div className="flex flex-wrap justify-center gap-8">
+      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+        <p className="text-gray-600 mb-4">“NudgeQuest's AI-driven simulations have been instrumental in analyzing complex policy scenarios and preparing me for diplomatic negotiations.”</p>
+        <h4 className="text-lg font-semibold text-gray-800">Boris Johnson</h4>
+        <p className="text-gray-500">Prime Minister</p>
+      </div>
+      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+        <p className="text-gray-600 mb-4">“As a scientist-turned-politician, I appreciate NudgeQuest’s meticulous data analytics tools that aid in decision-making processes.”</p>
+        <h4 className="text-lg font-semibold text-gray-800">Angela Merkel</h4>
+        <p className="text-gray-500">Chancellor</p>
+      </div>
+      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+        <p className="text-gray-600 mb-4">“NudgeQuest's simulations have provided invaluable insights into crisis management and strategic decision-making in international affairs.”</p>
+        <h4 className="text-lg font-semibold text-gray-800">Shinzo Abe</h4>
+        <p className="text-gray-500">Former Prime Minister</p>
+      </div>
+      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+        <p className="text-gray-600 mb-4">“The technical depth of NudgeQuest's AI assessments helps me stay ahead in the rapidly evolving field of software engineering.”</p>
+        <h4 className="text-lg font-semibold text-gray-800">Ms. Dhone07</h4>
+        <p className="text-gray-500">Software Engineer</p>
+      </div>
+      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+        <p className="text-gray-600 mb-4">“NudgeQuest's data-driven insights have enhanced my strategic planning and operational efficiencies in professional wrestling.”</p>
+        <h4 className="text-lg font-semibold text-gray-800">John Cena</h4>
+        <p className="text-gray-500">Professional Wrestler</p>
+      </div>
+      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+        <p className="text-gray-600 mb-4">“The tactical feedback from NudgeQuest's simulations has sharpened my decision-making skills on the football field, elevating my gameplay.”</p>
+        <h4 className="text-lg font-semibold text-gray-800">Mbappe</h4>
+        <p className="text-gray-500">Professional Footballer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        {/* Below  Testimony section*/}
 
         <section className="bg-primary text-white py-16">
           <div className="container mx-auto px-4 text-center">
@@ -377,9 +407,10 @@ const Home = () => {
           </div>
         </section>
 
-  
+          {/* HOW NUDGE QUEST TRANSFORMS YOUR INTERVIEW PREP Ection*/}
 
-        <section className="bg-gray-100 py-16 relative">
+
+        {/* <section className="bg-gray-50 py-16 relative">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-8 md:mb-0">
@@ -407,7 +438,119 @@ const Home = () => {
             </div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-20"></div>
-        </section>
+       
+       
+        </section> */}
+
+        <section className="bg-gray-50 py-16 relative overflow-hidden">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row items-center">
+      <div className="md:w-1/2 mb-8 md:mb-0">
+        <h2 className="text-4xl font-bold text-gray-800 mb-6">
+          How NudgeQuest Transforms Your Interview Preparation
+        </h2>
+        <p className="text-lg text-gray-600 mb-8">
+          Our platform goes beyond traditional interview prep by providing an interactive and comprehensive experience.
+          We combine real-time feedback, AI-driven analysis, and personalized insights to help you excel in your job interviews.
+        </p>
+        <ul className="list-disc list-inside text-gray-700 mb-8">
+          <li className="mb-4">AI-Curated Interview Questions</li>
+          <li className="mb-4">Real-Time Webcam Monitoring</li>
+          <li className="mb-4">Voice-to-Text Conversion</li>
+          <li className="mb-4">AI-Powered Response Evaluation</li>
+          <li className="mb-4">Detailed Feedback and Improvement Tips</li>
+        </ul>
+        <a href="/dashboard" className="bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-secondary transition duration-300">
+          Start Your Journey
+        </a>
+      </div>
+      <div className="md:w-1/2 flex justify-center items-center">
+        <img src="ex.svg" alt="Feature Highlight" className="h-auto max-w-full rounded-lg shadow-lg bg-white p-6"/>
+      </div>
+    </div>
+  </div>
+  <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-20 z-[-1]"></div>
+</section>
+
+
+
+
+<section className="max-w-3xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold mb-6 text-gray-800">Frequently Asked Questions</h2>
+      <Accordion type="single" collapsible>
+        <AccordionItem value="item-1">
+          <AccordionTrigger className="bg-gray-200 text-gray-800 font-semibold p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300">
+            What is NudgeQuest?
+          </AccordionTrigger>
+          <AccordionContent className="p-4 bg-white border border-t-0 border-gray-300 rounded-b-lg">
+            NudgeQuest is an AI-driven job mock interview platform that provides users with curated interview questions based on job role, tech stack, and experience. It evaluates responses through voice and webcam analysis and provides feedback on performance.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-2">
+          <AccordionTrigger className="bg-gray-200 text-gray-800 font-semibold p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300">
+            How does NudgeQuest generate interview questions?
+          </AccordionTrigger>
+          <AccordionContent className="p-4 bg-white border border-t-0 border-gray-300 rounded-b-lg">
+            NudgeQuest uses the Google Gemini API to generate interview questions based on the user's job role, tech stack, and years of experience.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-3">
+          <AccordionTrigger className="bg-gray-200 text-gray-800 font-semibold p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300">
+            What features does NudgeQuest offer?
+          </AccordionTrigger>
+          <AccordionContent className="p-4 bg-white border border-t-0 border-gray-300 rounded-b-lg">
+            NudgeQuest offers features such as generating interview questions, recording webcam and voice responses, converting voice to text, and providing detailed feedback on user performance.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-4">
+          <AccordionTrigger className="bg-gray-200 text-gray-800 font-semibold p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300">
+            How are voice responses analyzed in NudgeQuest?
+          </AccordionTrigger>
+          <AccordionContent className="p-4 bg-white border border-t-0 border-gray-300 rounded-b-lg">
+            Voice responses are converted to text and evaluated by AI to provide feedback on various aspects of the user's answers, such as clarity, coherence, and relevance.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-5">
+          <AccordionTrigger className="bg-gray-200 text-gray-800 font-semibold p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300">
+            Can users review their performance on NudgeQuest?
+          </AccordionTrigger>
+          <AccordionContent className="p-4 bg-white border border-t-0 border-gray-300 rounded-b-lg">
+            Yes, users can review their performance through the feedback provided by NudgeQuest, which includes insights on areas of improvement and suggestions for further practice.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-6">
+          <AccordionTrigger className="bg-gray-200 text-gray-800 font-semibold p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300">
+            What technologies are used to build NudgeQuest?
+          </AccordionTrigger>
+          <AccordionContent className="p-4 bg-white border border-t-0 border-gray-300 rounded-b-lg">
+            NudgeQuest is built using Next.js for the frontend and PostgreSQL for the backend database.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-7">
+          <AccordionTrigger className="bg-gray-200 text-gray-800 font-semibold p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300">
+            How does NudgeQuest handle different tech stacks?
+          </AccordionTrigger>
+          <AccordionContent className="p-4 bg-white border border-t-0 border-gray-300 rounded-b-lg">
+            Users can input multiple tech stacks, and NudgeQuest will generate relevant interview questions based on the selected tech stacks.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-8">
+          <AccordionTrigger className="bg-gray-200 text-gray-800 font-semibold p-4 rounded-t-lg hover:bg-gray-300 transition-colors duration-300">
+            Is NudgeQuest suitable for all job roles?
+          </AccordionTrigger>
+          <AccordionContent className="p-4 bg-white border border-t-0 border-gray-300 rounded-b-lg">
+            Yes, NudgeQuest is designed to accommodate a variety of job roles by customizing interview questions and feedback according to the specific role and required skills.
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </section>
       </main>
 
       <footer className="bg-primary text-white py-4 mt-16">
