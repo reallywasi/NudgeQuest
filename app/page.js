@@ -361,37 +361,52 @@ const Home = () => {
         <section className="bg-gray-100 py-16">
   <div className="container mx-auto px-4">
     <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">What Our Users Say</h2>
-    <div className="flex flex-wrap justify-center gap-8">
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="bg-white shadow-lg rounded-lg p-6">
         <p className="text-gray-600 mb-4">“NudgeQuest's AI-driven simulations have been instrumental in analyzing complex policy scenarios and preparing me for diplomatic negotiations.”</p>
         <h4 className="text-lg font-semibold text-gray-800">Boris Johnson</h4>
         <p className="text-gray-500">Prime Minister</p>
       </div>
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+      <div className="bg-white shadow-lg rounded-lg p-6">
         <p className="text-gray-600 mb-4">“As a scientist-turned-politician, I appreciate NudgeQuest’s meticulous data analytics tools that aid in decision-making processes.”</p>
         <h4 className="text-lg font-semibold text-gray-800">Angela Merkel</h4>
         <p className="text-gray-500">Chancellor</p>
       </div>
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
-        <p className="text-gray-600 mb-4">“NudgeQuest's simulations have provided invaluable insights into crisis management and strategic decision-making in international affairs.”</p>
-        <h4 className="text-lg font-semibold text-gray-800">Shinzo Abe</h4>
-        <p className="text-gray-500">Former Prime Minister</p>
-      </div>
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+      <div className="bg-white shadow-lg rounded-lg p-6">
         <p className="text-gray-600 mb-4">“The technical depth of NudgeQuest's AI assessments helps me stay ahead in the rapidly evolving field of software engineering.”</p>
-        <h4 className="text-lg font-semibold text-gray-800">Ms. Dhone07</h4>
+        <h4 className="text-lg font-semibold text-gray-800">Ms. Dhoni07</h4>
         <p className="text-gray-500">Software Engineer</p>
       </div>
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+      <div className="bg-white shadow-lg rounded-lg p-6">
         <p className="text-gray-600 mb-4">“NudgeQuest's data-driven insights have enhanced my strategic planning and operational efficiencies in professional wrestling.”</p>
         <h4 className="text-lg font-semibold text-gray-800">John Cena</h4>
         <p className="text-gray-500">Professional Wrestler</p>
       </div>
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+      <div className="bg-white shadow-lg rounded-lg p-6">
         <p className="text-gray-600 mb-4">“The tactical feedback from NudgeQuest's simulations has sharpened my decision-making skills on the football field, elevating my gameplay.”</p>
         <h4 className="text-lg font-semibold text-gray-800">Mbappe</h4>
         <p className="text-gray-500">Professional Footballer</p>
       </div>
+      <div className="bg-white shadow-lg rounded-lg p-6">
+  <p className="text-gray-600 mb-4">“NudgeQuest's comprehensive AI-driven analysis has been a game-changer in refining my strategic approach to global finance.”</p>
+  <h4 className="text-lg font-semibold text-gray-800">Warren Buffett</h4>
+  <p className="text-gray-500">Investor</p>
+</div>
+<div className="bg-white shadow-lg rounded-lg p-6">
+  <p className="text-gray-600 mb-4">“The insightful feedback from NudgeQuest's simulations has been crucial in enhancing my leadership skills and strategic vision.”</p>
+  <h4 className="text-lg font-semibold text-gray-800">Elon Musk</h4>
+  <p className="text-gray-500">Entrepreneur</p>
+</div>
+<div className="bg-white shadow-lg rounded-lg p-6">
+  <p className="text-gray-600 mb-4">“NudgeQuest's advanced AI tools have been instrumental in refining my creative processes and pushing the boundaries of innovation.”</p>
+  <h4 className="text-lg font-semibold text-gray-800">Lady Gaga</h4>
+  <p className="text-gray-500">Singer-Songwriter</p>
+</div>
+<div className="bg-white shadow-lg rounded-lg p-6">
+  <p className="text-gray-600 mb-4">“The actionable insights from NudgeQuest have significantly improved my strategic planning and performance on the global stage.”</p>
+  <h4 className="text-lg font-semibold text-gray-800">Jeff Bezos</h4>
+  <p className="text-gray-500">Entrepreneur</p>
+</div>
     </div>
   </div>
 </section>
@@ -399,7 +414,7 @@ const Home = () => {
 
         {/* Below  Testimony section*/}
 
-        <section className="bg-primary text-white py-16">
+        <section className="bg-gradient-to-r from-black via-black to-secondary text-white py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Elevate Your Interview Skills?</h2>
             <p className="text-lg mb-8">Join thousands of job seekers who have aced their interviews with the help of NudgeQuest.</p>
@@ -475,7 +490,7 @@ const Home = () => {
 
 
 
-<section className="max-w-3xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+<section className="max-w-3xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg my-10">
       <h2 className="text-3xl font-bold mb-6 text-gray-800">Frequently Asked Questions</h2>
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
