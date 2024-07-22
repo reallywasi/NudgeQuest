@@ -87,24 +87,36 @@ function AddNewInterview() {
     e.preventDefault();
     console.log(jobPosition, jobDesc, jobExperience);
 
-    const InputPrompt =
-      "Job position: " +
-      jobPosition +
-      ", Job Description: " +
-      jobDesc +
-      ", Years of Experience : " +
-      jobExperience +
-      " , Depends on Job Position, Job Description & Years of Experience give us " +
-      process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT +
-      " Interview question along with Answer in JSON format, Give us question and answer field on JSON";
-    const result = await chatSession.sendMessage(InputPrompt);
-    const MockJsonResp = result.response
-      .text()
-      .replace("```json", "")
-      .replace("```", "");
+    // const InputPrompt =
+    //   "Job position: " +
+    //   jobPosition +
+    //   ", Job Description: " +
+    //   jobDesc +
+    //   ", Years of Experience : " +
+    //   jobExperience +
+    //   " , Depends on Job Position, Job Description & Years of Experience give us " +
+    //   process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT +
+    //   " Interview question along with Answer in proper JSON format with proper coma and spaces and all, Give us question and answer field on JSON";
 
+
+    const InputPrompt =
+    "Job position: " +
+    jobPosition +
+    ", Job Description: " +
+    jobDesc +
+    ", Years of Experience: " +
+    jobExperience +
+    ". Based on the Job Position, Job Description, and Years of Experience, provide " +
+    process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT +
+    " interview questions along with answers in a proper JSON format. The response should be a JSON array where each element is an object with 'question' and 'answer' fields. Ensure proper commas and spaces. The output should look like this: [{\"question\": \"...\", \"answer\": \"...\"}, ...].";
+  
+    const result = await chatSession.sendMessage(InputPrompt);
+    console.log(result)
+    // const MockJsonResp = (result.response.text()).replace('```json','').replace('```','')
+    const MockJsonResp=(result.response.text()).replace('```json','').replace('```','')
     console.log(InputPrompt);
     console.log(JSON.parse(MockJsonResp));
+
     setJsonResponse(MockJsonResp);
     if (MockJsonResp) {
       const resp = await db
@@ -139,16 +151,7 @@ function AddNewInterview() {
     "UX/UI Designer", "Mobile Developer"
   ];
 
-  const techStacks = [
-    "MERN", "MEAN", "LAMP", "LEMP", "JAM", "Ruby on Rails", "Django", "Flask",
-    "Spring Boot", "ASP.NET Core", "Vue.js + Node.js", "Next.js", "Nuxt.js", "SvelteKit",
-    "Meteor.js", "GraphQL + Apollo", "Serverless Stack", "Flutter", "React Native",
-    "Xamarin", "Ionic", "TensorFlow", "PyTorch", "Hadoop", "Spark", "ELK Stack",
-    "SMACK Stack", "FARM Stack", "PEAN Stack", "PERN Stack", "Electron.js", "Unity",
-    "Unreal Engine", "Blockchain Stack", "Gatsby.js", "Hugo", "FastAPI", "NestJS",
-    "Phoenix", "Koa.js", "AdonisJS", "LoopBack", "KeystoneJS", "Sapper", "Laravel",
-    "Symphony", "CodeIgniter", "Zend Framework", "Qt", "Play Framework"
-  ];
+
   //__________________________________________________________
   return (
     <div>
@@ -174,14 +177,14 @@ function AddNewInterview() {
                     and years of experience
                   </h2>
 {/* _______________________________________________________ */}
-                  {/* <div className="mt-7 my-3">
+                  <div className="mt-7 my-3">
                     <label>Job Role/Job Position</label>
                     <Input
                       placeholder="Ex. Full Stack Developer"
                       required
                       onChange={(event) => setJobPosition(event.target.value)}
                     />
-                  </div> */}
+                  </div>
 
                   {/* <div className="mt-7 my-3">
   <label>Job Role/Job Position</label>
@@ -202,7 +205,7 @@ function AddNewInterview() {
   </Select>
 </div> */}
 
-<div className="mt-7 my-3">
+{/* <div className="mt-7 my-3">
         <label>Job Role/Job Position</label>
         <Select
           onValueChange={handleSelectChange}
@@ -230,7 +233,7 @@ function AddNewInterview() {
             className="mt-3"
           />
         )}
-      </div>
+      </div> */}
 
 
 
