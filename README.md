@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## NudgeQuest
+NudgeQuest is an AI-powered mock job interview platform that helps users prepare for real interviews. Users enter job role details, and the platform curates role-specific questions using the OpenAI API. It features real-time webcam and audio recording, converting responses to text for AI-based analysis and feedback. Built with Next.js, PostgreSQL, and ShadCN, NudgeQuest provides tailored interview practice and actionable insights. Live on Vercel.
+
+https://drive.google.com/drive/u/0/folders/1-UFM38bdFFD-zzqu34LPo5SoM_2yP4M-
+
 ## Getting Started
 
 First, run the development server:
